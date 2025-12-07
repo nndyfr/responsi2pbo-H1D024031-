@@ -1,0 +1,15 @@
+Setelah anda menyelesaikan kode, tolong jawab pertanyaan dibawah ini ya =
+
+
+1. Apa tujuan utama adanya interface dalam pemrograman berorientasi objek, dan bagaimana interface membantu menciptakan kontrak perilaku?
+2. Mengapa interface dapat memiliki banyak implementasi, dan apa makna konseptual dari kemampuan tersebut dalam desain sistem?
+3. Apa perbedaan mendasar antara extends dan implements dalam konteks interface, jika dilihat secara konsep tanpa melihat contoh kode?
+4. Apa alasan diperkenalkannya default method dalam interface, dan bagaimana fitur ini memengaruhi keberlangsungan (compatibility) suatu sistem yang sudah berjalan?
+5. Bagaimana konsep multiple interface memperluas fleksibilitas desain tanpa menimbulkan masalah kompleksitas yang biasa muncul pada multiple inheritance?
+
+Jawaban :
+1.Interface bertujuan untuk mendefinisikan kontrak standar berupa kumpulan method yang wajib dimiliki oleh setiap class yang mengimplementasikannya. Interface membantu menciptakan kontrak perilaku dengan memastikan bahwa setiap class implementor memiliki kemampuan atau perilaku yang sama, tanpa peduli bagaimana cara masing-masing class mengimplementasikan method tersebut.
+2.Interface dapat memiliki banyak implementasi karena interface hanya menentukan apa yang harus dilakukan, bukan bagaimana cara melakukannya. Secara konsep, hal ini memungkinkan berbagai class memberikan versi perilaku masing-masing sesuai kebutuhan. Kemampuan ini membuat desain sistem lebih fleksibel, mudah diperluas, dan mendukung prinsip polimorfisme dalam OOP.
+3.extends digunakan untuk mewarisi struktur dari parent (baik class ke class atau interface ke interface). Berarti akan child mengambil sifat atau kontrak dari parent. Sedangkan implements digunakan untuk memenuhi kontrak perilaku dari sebuah interface. Implementasi berarti class tersebut menyediakan isi dari method yang didefinisikan interface.
+4.Default method diperkenalkan untuk menjaga backward compatibility, yaitu memungkinkan penambahan method baru ke interface tanpa membuat class lama rusak. Karena sudah ada implementasi bawaan, class lama tetap berfungsi, sementara class baru bebas meng-override jika diperlukan.
+5.Multiple interface memberi fleksibilitas karena satu class bisa memiliki banyak peran tanpa menimbulkan konflik seperti pada multiple inheritance. Tidak terjadi “diamond problem” karena interface hanya menyediakan kontrak, sehingga tidak ada benturan implementasi dan desain tetap sederhana serta terkontrol.
